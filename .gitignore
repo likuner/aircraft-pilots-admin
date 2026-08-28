@@ -1,0 +1,31 @@
+# ===== 前端 =====
+frontend/node_modules/
+frontend/dist/
+frontend/*.local
+
+# ===== 后端 =====
+backend/target/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# ===== 系统 =====
+.DS_Store
+Thumbs.db
+
+# ===== 日志与临时 =====
+logs/
+*.log
+tmp/
+
+# ===== 工具产物（本地验证截图/报告，不入库） =====
+outputs/
+.workbuddy/

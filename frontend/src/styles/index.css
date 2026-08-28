@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Element Plus 主题变量覆盖（与 tailwind primary 同源 #2f6fed） ===== */
+:root {
+  --el-color-primary: #2f6fed;
+  --el-color-primary-light-3: #6b9af2;
+  --el-color-primary-light-5: #96b8f6;
+  --el-color-primary-light-7: #c1d6fa;
+  --el-color-primary-light-8: #d6e3fd;
+  --el-color-primary-light-9: #eaf1fe;
+  --el-color-primary-dark-2: #2559be;
+}
+
+/* 暗色主题下让 Element Plus 的表单/卡片更贴合 */
+html.dark {
+  --el-bg-color: #1e2430;
+  --el-bg-color-overlay: #252c3a;
+  --el-fill-color-blank: #1e2430;
+  --el-border-color: #3a4356;
+  --el-border-color-light: #333b4c;
+  --el-text-color-primary: #e5eaf3;
+  --el-text-color-regular: #cfd3dc;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 通用组件类：状态卡片 */
+@layer components {
+  .page-card {
+    @apply bg-white dark:bg-[#1e2430] rounded-lg border border-gray-200 dark:border-[#333b4c] p-5;
+  }
+  .search-bar {
+    @apply flex flex-wrap items-center gap-3 mb-4;
+  }
+  .toolbar {
+    @apply flex items-center justify-between mb-4;
+  }
+  .table-footer {
+    @apply flex items-center justify-end mt-4;
+  }
+}
